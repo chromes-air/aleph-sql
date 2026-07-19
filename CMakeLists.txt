@@ -24,6 +24,8 @@ else()
   message(WARNING "[WARNING] Unknown platform: ${CMAKE_SYSTEM_NAME} - Build may fail")
 endif()
 find_package(SQLite3 REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(MYSQL REQUIRED mariadb)
 set(header_directory
   include/aleph/
   include/aleph/sql/
@@ -39,7 +41,7 @@ if(ALEPH_PLATFORM_WINDOWS)
   target_compile_definitions(aleph PRIVATE ALEPH_SQLDATABASE_WIN32)
   target_compile_definitions(aleph PRIVATE _CRT_SECURE_NO_WARNINGS)
 endif()
-add_executable(test_aleph_sql test/test_sqlite3_async_db.cc)
+add_executable(test_aleph_sql test/test_mysql_db.cc)
 if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
     target_link_libraries(
       test_aleph_sql
@@ -48,14 +50,16 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
     )
     target_compile_definitions(aleph PRIVATE ALEPH_SQLDATABASE_WIN32)
     target_link_libraries(aleph PRIVATE SQLite3::SQLite3)
+    target_link_libraries(aleph PRIVATE  ${MYSQL_LIBRARIES})
 else()
     target_link_libraries(test_aleph_sql PRIVATE aleph SQLite3::SQLite3)
+    target_link_libraries(test_aleph_sql PRIVATE aleph  ${MYSQL_LIBRARIES})
 endif()
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 configure_package_config_file(
-    ${CMAKE_CURRENT_SOURCE_DIR}/cmake/AlephSQLConfig.cmake.in
-    ${CMAKE_CURRENT_BINARY_DIR}/AlephSQLConfig.cmake
+    ${CMAKE_CURRENT_SOURCE_DIR}/cmake/aleph_sql-config.cmake.in
+    ${CMAKE_CURRENT_BINARY_DIR}/aleph_sql-config.cmake
     INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/AlephSQL
 )
 install(TARGETS aleph
@@ -68,6 +72,6 @@ install(DIRECTORY include/aleph
   FILES_MATCHING PATTERN "*.hpp"
 )
 install(FILES
-  ${CMAKE_CURRENT_BINARY_DIR}/AlephSQLConfig.cmake
+  ${CMAKE_CURRENT_BINARY_DIR}/aleph_sql-config.cmake
   DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/AlephSQL
 )

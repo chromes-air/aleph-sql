@@ -16,6 +16,7 @@
 #ifndef ALEPH_SQL_SQLDATABASE
 #define ALEPH_SQL_SQLDATABASE
 
+#include <aleph/sql/sql_type.hpp>
 #include <memory>
 #include <type_traits>
 #include "aleph/util/sqltype_trais.hpp"
@@ -32,6 +33,7 @@
 
 namespace aleph {
   namespace sql_impl {class sql_database_sqlite3;}
+  namespace sql_impl {class sql_database_mysql;}
   class sql_database {
     public:
     template<aleph::sql_type sql_Tp>
@@ -47,8 +49,25 @@ namespace aleph {
             sqlite3_sharedTp new_sqlite_ptr = std::make_shared<aleph::sql_impl::sql_database_sqlite3>();
           return new_sqlite_ptr;
       }
+    
+    template<aleph::sql_type sql_Tp>
+      static typename std::enable_if<
+        aleph::sql_type_trais::is_mysql_type<
+          sql_Tp
+        >::is_mysql_T , std::shared_ptr<
+          aleph::sql_impl::sql_database_mysql
+        >
+      >::type create_sql() noexcept {
+        typedef typename aleph::sql_impl::sql_database_mysql mysql_Tp;
+          typedef typename std::shared_ptr<aleph::sql_impl::sql_database_mysql> mysql_sharedTp;
+            mysql_sharedTp new_mysql_ptr = std::make_shared<aleph::sql_impl::sql_database_mysql>();
+          return new_mysql_ptr;
+      }
+    
   };
+  
   typedef typename std::shared_ptr<aleph::sql_impl::sql_database_sqlite3> sqlite3_ptr;
+    typedef typename std::shared_ptr<aleph::sql_impl::sql_database_mysql> mysql_ptr;
 }
 
 #endif

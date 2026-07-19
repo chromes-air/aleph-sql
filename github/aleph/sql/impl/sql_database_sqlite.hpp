@@ -1,29 +1,11 @@
-/**
-  Copyright [chrmoes-air] [0901]
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-*/
 #ifndef ALEPH_SQL_SQLDATABASE_SQLITE
 #define ALEPH_SQL_SQLDATABASE_SQLITE
 
-#ifdef ALEPH_SQLDATABASE_WIN32
-#include <locale>
-#include <codecvt>
-#endif
- 
 #include <functional>
 #include <system_error>
 #include <tuple>
+#include <locale>
+#include <codecvt>
 #include <sqlite3.h>
 #include <cstddef>
 #include <cstdint>
@@ -33,9 +15,9 @@
 #include <string>
 #include <memory>
 #include "aleph/sql/sql_error_code.hpp"
-#include "aleph/util/function_trais.hpp"
-#include "aleph/util/async_error_code.hpp"
-#include "aleph/thread/thread_manager.hpp"
+#include "/util/function_trais.h"
+#include "../../util/async_error_code.h"
+#include "../../thread/thread_manager.hpp"
 
 namespace aleph {
   namespace sql_impl {
@@ -64,13 +46,13 @@ namespace aleph {
           sqlite3_impl_move.M_sqlite_ptr = nullptr;
         }
         return *this;
-      };
+      }
 
       sql_database_sqlite3(sql_database_sqlite3_implT& sqlite3_impl_copy) = delete;
-      sql_database_sqlite3(sql_database_sqlite3_implT&& sqlite3_impl_move) noexcept
+      sql_database_sqlite3(sql_database_sqlite3_implT&& sqlite3_impl_move)
         :M_sqlite_ptr(sqlite3_impl_move.M_sqlite_ptr) ,
           M_sqlite_stmt(sqlite3_impl_move.M_sqlite_stmt)
-            {};
+            {}
       
       struct sqlite3_execute_result {
         bool sqlite3_execute_status = false;
@@ -84,7 +66,6 @@ namespace aleph {
       };
 
       sql_database_sqlite3() {
-        sqlite3_config(SQLITE_CONFIG_SERIALIZED);
         M_sqlite_ptr = nullptr; //Init sqlite_ptr`
         M_sqlite_stmt = nullptr; //Init sqlite_stmt`
       }
@@ -356,7 +337,7 @@ namespace aleph {
             typename aleph::function_trais::aleph_function_ret_type<
               complite_callback, const std::error_code& , 
                 struct sqlite3_execute_result&& , 
-                  const std::string& 
+                  const std::string&
               >::type, void
             >::result
           ::value, 
@@ -467,18 +448,6 @@ namespace aleph {
           }
         return;
       }
-
-      #ifdef ALEPH_SQLDATABASE_WIN32
-        const std::wstring M_utf8_to_utf16(const std::string& utf8_str)
-        noexcept {
-          if (utf8_str.empty()) {
-            PRINT_ERROR_LOGGER("Invalid utf8 char!");
-            return nullptr;
-          }
-          std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
-          return converter.from_bytes(utf8_str);
-        }
-      #endif
     };
   }
   typedef typename aleph::sql_impl::sql_database_sqlite3::sqlite3_execute_result sqlite_execute_result;

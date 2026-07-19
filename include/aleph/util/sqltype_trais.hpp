@@ -24,6 +24,10 @@ namespace aleph {
     struct is_slqite_type {
       static constexpr bool is_sqlite_T = (sqlT == sql_type::SQLITE);
     };
+    template<sql_type sqlT>
+    struct is_mysql_type {
+      static constexpr bool is_mysql_T = (sqlT == sql_type::MYSQL);
+    };
   }
 }
 

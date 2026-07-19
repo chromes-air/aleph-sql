@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/kuromi/code/C++/aleph_sql/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

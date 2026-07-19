@@ -1,0 +1,7 @@
+# aleph_sql-config.cmake.in
+@PACKAGE_INIT@
+
+set_and_check(ALEPH_SQL_INCLUDE_DIR "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
+set_and_check(ALEPH_SQL_LIB_DIR "@PACKAGE_CMAKE_INSTALL_LIBDIR@")
+
+check_required_components(aleph_sql)
