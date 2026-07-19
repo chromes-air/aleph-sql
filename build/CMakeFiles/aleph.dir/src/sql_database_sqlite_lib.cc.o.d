@@ -190,12 +190,12 @@ CMakeFiles/aleph.dir/src/sql_database_sqlite_lib.cc.o: \
  /usr/include/c++/16/bits/this_thread_sleep.h /usr/include/sys/time.h \
  /usr/include/c++/16/mutex /usr/include/c++/16/deque \
  /usr/include/c++/16/bits/stl_deque.h /usr/include/c++/16/bits/deque.tcc \
- /usr/include/c++/16/thread /usr/local/include/aleph/util/loggeer.hpp \
+ /usr/include/c++/16/thread /usr/local/include/aleph/util/logger.hpp \
  /usr/include/c++/16/iostream /usr/include/c++/16/ostream \
  /usr/include/c++/16/bits/ostream_print.h \
  /usr/include/c++/16/bits/ostream.tcc /usr/include/c++/16/istream \
  /usr/include/c++/16/bits/istream.tcc \
- /home/kuromi/code/C++/aleph_sql/src/../include/aleph/util/loggeer.hpp \
+ /home/kuromi/code/C++/aleph_sql/src/../include/aleph/util/logger.hpp \
  /home/kuromi/code/C++/aleph_sql/src/../include/aleph/sql/sql_database.hpp \
  /usr/local/include/aleph/sql/sql_type.hpp \
  /usr/local/include/aleph/util/sqltype_trais.hpp

@@ -30,7 +30,7 @@
 #include <utility>
 #include <vector>
 #include "aleph/util/function_trais.hpp"
-#include "aleph/util/loggeer.hpp"
+#include "aleph/util/logger.hpp"
 
 namespace aleph {
   namespace thread {

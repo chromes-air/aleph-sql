@@ -14,7 +14,7 @@
   limitations under the License.
 */
 #include "../include/aleph/sql/impl/sql_database_sqlite.hpp"
-#include "../include/aleph/util/loggeer.hpp"
+#include "../include/aleph/util/logger.hpp"
 #include "../include/aleph/sql/sql_database.hpp"
 #include <string>
 

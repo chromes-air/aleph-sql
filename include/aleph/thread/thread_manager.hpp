@@ -17,7 +17,7 @@
 #define ALEPH_SQL_THREAD_MANAGER
 
 #include "sql_thread.hpp"
-#include "aleph/util/loggeer.hpp"
+#include "aleph/util/logger.hpp"
 #include <atomic>
 #include <cstddef>
 #include <memory>

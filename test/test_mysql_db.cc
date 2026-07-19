@@ -1,6 +1,6 @@
 #include <aleph/aleph_sql.hpp>
 #include <aleph/sql/sql_type.hpp>
-#include <aleph/util/loggeer.hpp>
+#include <aleph/util/logger.hpp>
 
 int main () {
   aleph::mysql_ptr mysqlptr = aleph::sql_database::create_sql<aleph::sql_type::MYSQL>();

@@ -26,7 +26,7 @@
 #include "aleph/util/async_error_code.hpp"
 #include "aleph/util/function_trais.hpp"
 #include "aleph/util/sqltype_trais.hpp"
-#include "aleph/util/loggeer.hpp"
+#include "aleph/util/logger.hpp"
 
 
 #endif

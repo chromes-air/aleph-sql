@@ -5,7 +5,7 @@ CMakeFiles/aleph.dir/src/sql_database_sqlite_lib.cc.o
  /home/kuromi/code/C++/aleph_sql/src/sql_database_sqlite_lib.cc
  /home/kuromi/code/C++/aleph_sql/include/aleph/sql/impl/sql_database_sqlite.hpp
  /home/kuromi/code/C++/aleph_sql/include/aleph/sql/sql_database.hpp
- /home/kuromi/code/C++/aleph_sql/include/aleph/util/loggeer.hpp
+ /home/kuromi/code/C++/aleph_sql/include/aleph/util/logger.hpp
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
@@ -290,7 +290,7 @@ CMakeFiles/aleph.dir/src/sql_database_sqlite_lib.cc.o
  /usr/local/include/aleph/thread/thread_manager.hpp
  /usr/local/include/aleph/util/async_error_code.hpp
  /usr/local/include/aleph/util/function_trais.hpp
- /usr/local/include/aleph/util/loggeer.hpp
+ /usr/local/include/aleph/util/logger.hpp
  /usr/local/include/aleph/util/sqltype_trais.hpp
 
 libaleph.so

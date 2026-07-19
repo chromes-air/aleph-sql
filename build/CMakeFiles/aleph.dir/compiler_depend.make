@@ -4,7 +4,7 @@
 CMakeFiles/aleph.dir/src/sql_database_sqlite_lib.cc.o: /home/kuromi/code/C++/aleph_sql/src/sql_database_sqlite_lib.cc \
   /home/kuromi/code/C++/aleph_sql/include/aleph/sql/impl/sql_database_sqlite.hpp \
   /home/kuromi/code/C++/aleph_sql/include/aleph/sql/sql_database.hpp \
-  /home/kuromi/code/C++/aleph_sql/include/aleph/util/loggeer.hpp \
+  /home/kuromi/code/C++/aleph_sql/include/aleph/util/logger.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -289,7 +289,7 @@ CMakeFiles/aleph.dir/src/sql_database_sqlite_lib.cc.o: /home/kuromi/code/C++/ale
   /usr/local/include/aleph/thread/thread_manager.hpp \
   /usr/local/include/aleph/util/async_error_code.hpp \
   /usr/local/include/aleph/util/function_trais.hpp \
-  /usr/local/include/aleph/util/loggeer.hpp \
+  /usr/local/include/aleph/util/logger.hpp \
   /usr/local/include/aleph/util/sqltype_trais.hpp
 
 libaleph.so: /usr/lib/crti.o \
@@ -428,6 +428,8 @@ libaleph.so: /usr/lib/crti.o \
 
 /usr/include/bits/cpu-set.h:
 
+/usr/local/include/aleph/util/logger.hpp:
+
 /usr/include/bits/errno.h:
 
 /usr/include/c++/16/cstdlib:
@@ -480,9 +482,15 @@ libaleph.so: /usr/lib/crti.o \
 
 /usr/include/c++/16/bits/ios_base.h:
 
+/usr/include/bits/types/timer_t.h:
+
+/usr/include/c++/16/bits/ostream_insert.h:
+
 /home/kuromi/code/C++/aleph_sql/src/sql_database_sqlite_lib.cc:
 
 /usr/include/bits/types/struct_tm.h:
+
+/home/kuromi/code/C++/aleph_sql/include/aleph/util/logger.hpp:
 
 /usr/include/bits/types/struct_timespec.h:
 
@@ -520,6 +528,18 @@ libaleph.so: /usr/lib/crti.o \
 
 /usr/include/bits/libc-header-start.h:
 
+/usr/include/c++/16/bits/max_size_type.h:
+
+/usr/include/c++/16/bits/ostream.h:
+
+/usr/include/c++/16/bits/predefined_ops.h:
+
+/usr/include/bits/types/mbstate_t.h:
+
+/usr/include/bits/floatn-common.h:
+
+/usr/include/c++/16/bits/enable_special_members.h:
+
 /usr/include/c++/16/bits/ptr_traits.h:
 
 /usr/include/bits/long-double.h:
@@ -543,8 +563,6 @@ libaleph.so: /usr/lib/crti.o \
 /usr/include/c++/16/bits/locale_facets.tcc:
 
 /usr/include/asm-generic/int-ll64.h:
-
-/usr/local/include/aleph/util/loggeer.hpp:
 
 /usr/include/bits/types/locale_t.h:
 
@@ -577,24 +595,6 @@ CMakeFiles/aleph.dir/src/sql_database_sqlite_lib.cc.o:
 /usr/include/bits/sched.h:
 
 /usr/include/features.h:
-
-/usr/include/c++/16/bits/max_size_type.h:
-
-/usr/include/c++/16/bits/ostream.h:
-
-/usr/include/c++/16/bits/predefined_ops.h:
-
-/usr/include/c++/16/bits/enable_special_members.h:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/include/bits/types/mbstate_t.h:
-
-/usr/include/bits/types/timer_t.h:
-
-/usr/include/c++/16/bits/ostream_insert.h:
-
-/home/kuromi/code/C++/aleph_sql/include/aleph/util/loggeer.hpp:
 
 /usr/include/c++/16/bits/functional_hash.h:
 
@@ -748,10 +748,6 @@ CMakeFiles/aleph.dir/src/sql_database_sqlite_lib.cc.o:
 
 /usr/include/c++/16/bits/stdexcept_throw.h:
 
-/usr/include/c++/16/bits/stl_iterator_base_funcs.h:
-
-/usr/include/c++/16/bits/stl_algobase.h:
-
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/c++/16/bits/uses_allocator.h:
@@ -765,6 +761,10 @@ CMakeFiles/aleph.dir/src/sql_database_sqlite_lib.cc.o:
 /usr/include/c++/16/ext/numeric_traits.h:
 
 /usr/include/c++/16/bits/stl_iterator.h:
+
+/usr/include/c++/16/bits/stl_algobase.h:
+
+/usr/include/c++/16/bits/stl_iterator_base_funcs.h:
 
 /usr/include/c++/16/bits/stl_iterator_base_types.h:
 

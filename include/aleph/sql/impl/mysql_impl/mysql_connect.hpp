@@ -27,7 +27,7 @@
 #include <string>
 #include <thread>
 #include <utility>
-#include "aleph/util/loggeer.hpp"
+#include "aleph/util/logger.hpp"
 
 namespace aleph {
   namespace sql_impl {
