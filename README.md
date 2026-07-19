@@ -25,7 +25,8 @@ A high-performance asynchronous SQL C++ library that natively supports Linux and
 
   <span>
     Future dependencies are expected to support many databases, but keep in mind that just because this library 
-    supports them doesn't mean you need to download all of them.
+    supports them doesn't mean you need to download all of them , 
+    Bwt , MySQL support is being restructured, but this doesn’t affect the use of SQLite.
   </span>
 
   ###
