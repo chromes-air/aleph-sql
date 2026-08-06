@@ -13,9 +13,9 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 */
-#include "../include/aleph/sql/impl/sql_database_sqlite.hpp"
-#include "../include/aleph/util/logger.hpp"
-#include "../include/aleph/sql/sql_database.hpp"
+#include "aleph/sql/impl/sql_database_sqlite.hpp"
+#include "aleph/util/logger.hpp"
+#include "aleph/sql/sql_database.hpp"
 #include <string>
 
 bool aleph::sql_impl::sql_database_sqlite3::open_sqlite_database 

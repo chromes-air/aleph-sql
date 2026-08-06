@@ -27,7 +27,6 @@ namespace aleph {
   namespace sql_impl {
     class sql_database_mysql : 
       public std::enable_shared_from_this<sql_database_mysql> {
-        
         private:
         typedef typename aleph::sql_impl::mysql::mysql_connect mysql_connectionT;
           typedef typename aleph::sql_impl::mysql::mysql_connect_pool mysql_connect_pool;
@@ -119,6 +118,7 @@ namespace aleph {
         std::shared_ptr<aleph::sql_impl::mysql::mysql_connect> M_mysql_connect_manager;
     };
   }
+  typedef typename aleph::sql_impl::sql_database_mysql::mysql_option mysql_connect_option;
 }
 
 #endif

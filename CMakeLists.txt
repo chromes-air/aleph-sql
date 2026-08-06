@@ -25,7 +25,7 @@ else()
 endif()
 find_package(SQLite3 REQUIRED)
 find_package(PkgConfig REQUIRED)
-pkg_check_modules(MYSQL REQUIRED mariadb)
+pkg_check_modules(MYSQL REQUIRED mysqlclient)
 set(header_directory
   include/aleph/
   include/aleph/sql/
@@ -35,6 +35,7 @@ set(header_directory
 )
 set(lib_files
   src/sql_database_sqlite_lib.cc
+  src/sql_logger_lib.cc
 )
 add_library(aleph SHARED ${lib_files})
 if(ALEPH_PLATFORM_WINDOWS)
@@ -53,7 +54,7 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
     target_link_libraries(aleph PRIVATE  ${MYSQL_LIBRARIES})
 else()
     target_link_libraries(test_aleph_sql PRIVATE aleph SQLite3::SQLite3)
-    target_link_libraries(test_aleph_sql PRIVATE aleph  ${MYSQL_LIBRARIES})
+    target_link_libraries(test_aleph_sql PRIVATE aleph ${MYSQL_CLIENT_LIB})
 endif()
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)

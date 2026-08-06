@@ -21,7 +21,7 @@
 namespace aleph {
   namespace sql_type_trais {
     template<sql_type sqlT>
-    struct is_slqite_type {
+    struct is_sqlite_type {
       static constexpr bool is_sqlite_T = (sqlT == sql_type::SQLITE);
     };
     template<sql_type sqlT>

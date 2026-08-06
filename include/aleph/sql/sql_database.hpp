@@ -38,7 +38,7 @@ namespace aleph {
     public:
     template<aleph::sql_type sql_Tp>
       static typename std::enable_if<
-        aleph::sql_type_trais::is_slqite_type<
+        aleph::sql_type_trais::is_sqlite_type<
           sql_Tp
         >::is_sqlite_T , std::shared_ptr<
           aleph::sql_impl::sql_database_sqlite3

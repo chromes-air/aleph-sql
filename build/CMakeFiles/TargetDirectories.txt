@@ -1,0 +1,8 @@
+/home/ouzihang/Project/C++/aleph-sql/build/CMakeFiles/aleph.dir
+/home/ouzihang/Project/C++/aleph-sql/build/CMakeFiles/test_aleph_sql.dir
+/home/ouzihang/Project/C++/aleph-sql/build/CMakeFiles/edit_cache.dir
+/home/ouzihang/Project/C++/aleph-sql/build/CMakeFiles/rebuild_cache.dir
+/home/ouzihang/Project/C++/aleph-sql/build/CMakeFiles/list_install_components.dir
+/home/ouzihang/Project/C++/aleph-sql/build/CMakeFiles/install.dir
+/home/ouzihang/Project/C++/aleph-sql/build/CMakeFiles/install/local.dir
+/home/ouzihang/Project/C++/aleph-sql/build/CMakeFiles/install/strip.dir
