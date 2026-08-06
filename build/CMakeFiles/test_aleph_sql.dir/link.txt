@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/test_aleph_sql.dir/link.d CMakeFiles/test_aleph_sql.dir/test/test_mysql_db.cc.o -o test_aleph_sql  -Wl,-rpath,/home/ouzihang/Project/C++/aleph-sql/build:/usr/lib64/mysql /usr/lib64/libsqlite3.so libaleph.so /usr/lib64/mysql/libmysqlclient.so
